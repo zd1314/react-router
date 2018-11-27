@@ -1,30 +1,12 @@
-# my-vue
+### 央行房价指数 
 
-> A Vue.js project
+系统： XP
 
-## Build Setup
+浏览器：chrome 49.x
 
-``` bash
-# install dependencies
-npm install
+eslint 基于 google 规则修改
 
-# serve with hot reload at localhost:8080
-npm run dev
+---
 
-# build for production with minification
-npm run build
+deadline：2018-10-15
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
