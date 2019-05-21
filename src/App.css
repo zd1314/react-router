@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  width: 1920px;
+  height: 1080px;
+
 }
 
 .App-logo {
@@ -35,11 +38,13 @@
   font-size:24px
 }
 .wrap{
-  display: flex
+  display: flex;
 }
 .content{
   box-sizing: border-box;
-  padding: 10px
+  padding: 10px;
+  width: 1630px;
+  background: lightskyblue
 }
 .main{
   width: 300px;

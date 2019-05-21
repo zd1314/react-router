@@ -1,4 +1,5 @@
 import React from 'react';
+import Tab from '../../component/tab/tab';
 class List extends React.Component {
   constructor(props) {
     super(props);
@@ -6,7 +7,11 @@ class List extends React.Component {
   }
   render() {
     return (
-      <div>44444444</div>
+      <div style={{
+        position: 'relative'
+      }}>
+        < ClipPath />
+      </div>
     )
   }
 }
