@@ -1,5 +1,5 @@
 import React from 'react';
-import Tab from '../../component/tab/tab';
+import ClipPath from '../../component/clip-path/clipPath';
 class List extends React.Component {
   constructor(props) {
     super(props);

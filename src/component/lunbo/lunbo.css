@@ -44,3 +44,144 @@
   opacity:0.5;
   transition:all 1s;
 }
+
+
+
+
+.picture-wrap>div{
+  display: inline-block;
+  margin: 50px 0px;
+  width: 250px;
+  height: 250px;
+  border-radius: 200px;
+  filter: grayscale(0.9);
+  cursor: pointer;
+
+}
+.picture-wrap >div:hover{
+ filter: none;
+}
+.picture-wrap .text:hover{
+  top:70px;
+  opacity: 1;
+
+}
+.text {
+  position: absolute;
+  background: rgba(200, 0, 0, 1);
+  padding: 20px 0;
+  top: 90px;
+  width: 250px;
+  opacity:0;
+  text-align: center;
+  color: white;
+  font-size:24px;
+  transition: top 1s,opacity 1s;
+
+
+}
+ .leftP .text{
+  background:rgba(0, 0, 200, 1);
+}
+.rightP .text{
+  background:rgba(200, 100, 0, 1);
+}
+
+.bottomP .text{
+  background:rgba(0, 200, 0, 1);
+}
+
+.topP {
+  background: url('./1.jpg') ;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-size: contain;
+  position: relative;
+  left: -125px;
+  top: -130px;
+  transition-delay:0.1s;
+  animation: topMove 1s linear
+
+}
+.leftP{
+  background: url('./2.jpg');
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-size: contain;
+  position: relative;
+  transition-delay:0.1s;
+  animation: leftMove 1s linear
+}
+.rightP {
+  background: url('./3.jpg');
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-size: contain;
+  position: relative;
+  top: -354px;
+  left: 250px;
+  transition-delay:0.1s;
+  animation: rightMove 1s linear
+
+}
+
+.bottomP {
+  background: url('./4.jpg');
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-size: contain;
+  position: relative;
+  top: -225px;
+  left: -124px;
+  transition-delay:0.1s;
+  animation: bottomMove 1s linear
+}
+@keyframes leftMove{
+  from{
+    transform: translateX(-30px)
+  }
+  to{
+    transform: translateX(0px)
+  }
+}
+@keyframes rightMove{
+  from{
+    left:280px
+  }
+  to{
+    left:250px
+  }
+}
+
+@keyframes  topMove{
+  from{
+    top:-160px
+  }
+  to{
+    top:-130px
+  }
+}
+
+@keyframes  bottomMove{
+  from{
+    top:-180px
+  }
+  to{
+    top: -220px
+  }
+}
+ h1{
+  font-size: 60px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image:-webkit-linear-gradient(right, red, orange, yellow, green, blue, indigo, violet);
+  animation: hue 1s linear infinite;
+  position: absolute;
+  top:-155px;
+  left:20px
+
+}
+@keyframes hue{
+  from {
+    filter:hue-rotate(0deg)
+  }
+  to{
+    filter: hue-rotate(360deg)
+  }
+}

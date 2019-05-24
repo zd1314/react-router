@@ -1,5 +1,6 @@
 import React from 'react';
 import Lunbo from '../../component/lunbo/lunbo';
+import Tab from '../../component/tab/tab';
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -9,6 +10,7 @@ class HomePage extends React.Component {
     return (
       <div>
         <Lunbo />
+        <Tab />
       </div>
     )
   }
