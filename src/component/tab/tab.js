@@ -3,32 +3,24 @@ class Tab extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      count:0
+      name: 'zhanfgsan',
+      id:123
     }
   }
   render() {
+    setTimeout(() => { this.setState({ name: 'Jaeha', id: '222' }) }, 1000)
     return (
       <div style={{
         position: 'absolute',
-        left: 360,
-        top:500
+        left: 1500,
+        top:300
       }}>
-        <div style={{
-          width: 400,
-          height: 200,
-          border:'1px solid #fff'
-        }}>
-          <button onClick={this.handle.bind(this)}>点击</button>
-        </div>
+        <h1>Hello {this.state.name}</h1>
+        <h2>Your Id is {this.state.id}</h2>
       </div>
     )
   }
-  handle() {
-    this.setState((prevState,tet) => ({ count: prevState.count+1  }), () => {
-      console.log(this.state)
-    })
 
-  }
   componentDidMount() {
 
   }

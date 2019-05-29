@@ -1,6 +1,7 @@
 import React from 'react';
 import Lunbo from '../../component/lunbo/lunbo';
 import Tab from '../../component/tab/tab';
+import Map from '../../component/map/map'
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -8,9 +9,10 @@ class HomePage extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Lunbo />
+      <div >
+        {/* <Lunbo /> */}
         <Tab />
+         <Map />
       </div>
     )
   }
