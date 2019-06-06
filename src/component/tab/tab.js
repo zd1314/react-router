@@ -8,12 +8,13 @@ class Tab extends React.Component{
     }
   }
   render() {
-    setTimeout(() => { this.setState({ name: 'Jaeha', id: '222' }) }, 1000)
+
     return (
       <div style={{
         position: 'absolute',
         left: 1500,
-        top:300
+        top: 300,
+        zIndex:100
       }}>
         <h1>Hello {this.state.name}</h1>
         <h2>Your Id is {this.state.id}</h2>
@@ -22,7 +23,11 @@ class Tab extends React.Component{
   }
 
   componentDidMount() {
-
+    const me = this;
+    me.timer=setTimeout(() => { this.setState({ name: 'Jaeha', id: '222' }) }, 1000)
+  }
+  componentWillUnmount() {
+    clearTimeout(this.timer)
   }
 }
 export default Tab;

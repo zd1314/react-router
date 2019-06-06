@@ -1,5 +1,5 @@
 import React from 'react';
-import ClipPath from '../../component/clip-path/clipPath';
+import CommApp from '../../component/comment/commApp';
 class List extends React.Component {
   constructor(props) {
     super(props);
@@ -10,7 +10,7 @@ class List extends React.Component {
       <div style={{
         position: 'relative'
       }}>
-        < ClipPath />
+        <CommApp />
       </div>
     )
   }

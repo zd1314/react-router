@@ -14,19 +14,19 @@ class App extends Component {
     return (
       <HashRouter>
         <div className="App">
-          <ResizeManager fullWidth={width} fullHeight={height} mode={mode} />
+          {/* <ResizeManager fullWidth={width} fullHeight={height} mode={mode} /> */}
           <Route exact path={'/'} />
           <div className={'list'}></div>
           <div className={'wrap'}>
             <div className={'main'}>
               <ul className={'nav-wrap'}>
-                <Link to='/homepage'>
+                <Link to='/homepage' replace>
                   <li>首页</li>
                 </Link>
-                <Link to='/list'>
+                <Link to='/list' replace>
                   <li>1</li>
                 </Link>
-                <Link to='/product'>
+                <Link to='/product' replace>
                   <li>2</li>
                 </Link>
               </ul>

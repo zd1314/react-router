@@ -1,0 +1,109 @@
+.music-wrap{
+
+  display: flex;
+}
+
+.music-wrap li{
+  flex:1;
+  position: relative;
+  margin-left: 60px;
+
+}
+
+.music-wrap li div{
+  margin-top: 100px;
+  margin-left:-29px
+}
+.music-wrap li:nth-child(3) div{
+  margin-top: 80px
+}
+.music-wrap li div{
+   width: 60px;
+   height: 60px;
+   background:#fff;
+   border-radius: 60px;
+   text-align:center;
+   color: black;
+  line-height: 60px
+}
+.music-wrap li .active{
+  animation: moves 1s linear ;
+  color:#fff
+}
+.music-wrap li:nth-child(1) .active{
+  background: #B7FF4A;
+}
+.music-wrap li:nth-child(2) .active{
+  background: orange;
+}
+.music-wrap li:nth-child(3) .active{
+  background: #FF44FF
+}
+.music-wrap li:nth-child(4) .active{
+  background: #00FFFF
+}
+.music-wrap li:nth-child(5) .active{
+  background: #AAAAFF
+}
+@keyframes moves{
+  0%{
+    transform: scale(1)
+  }
+ 50%{
+    transform: scale(1.1)
+  }
+  100%{
+    transform: scale(1)
+  }
+}
+
+
+.dramp-wrap{
+  height: 800px;
+  margin-top:50px;
+
+}
+.dramp-wrap li{
+  width: 100px;
+  height: 170px;
+  border-radius: 10px;
+  margin-left: 10px;
+  display: inline-block;
+  cursor: pointer;
+
+}
+
+.dramp-wrap li p{
+  width: 8px;
+  height: 8px;
+  background: black;
+  border-radius: 8px;
+  margin: 15px;
+  position: relative;
+  border:2px solid #fff
+}
+.dramp-wrap li p::after{
+  content:'';
+  position: absolute;
+  left:15px;
+  top:0px;
+  width:4px;
+  height: 4px;
+  background: #eee;
+  border:1px solid #fff;
+  border-radius: 4px;
+  display: block
+}
+.dramp-wrap li p::before{
+  content: '';
+  width: 2px;
+  height: 5px;
+  border-radius: 2px;
+  background: #444444 ;
+  display: block;
+  position: absolute;
+  left:-9px;
+  top:0px
+
+}
+
