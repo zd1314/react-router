@@ -6,6 +6,7 @@ import { HashRouter, Route, Link } from 'react-router-dom';
 import Homepage from './model/homepage/homepage';
 import List from './model/list/list';
 import Product from './model/product/product';
+
 class App extends Component {
   render() {
     const width = 1920;
@@ -15,13 +16,14 @@ class App extends Component {
       <HashRouter>
         <div className="App">
           {/* <ResizeManager fullWidth={width} fullHeight={height} mode={mode} /> */}
-          <Route exact path={'/'} />
+
           <div className={'list'}></div>
           <div className={'wrap'}>
             <div className={'main'}>
               <ul className={'nav-wrap'}>
-                <Link to='/homepage' replace>
-                  <li>首页</li>
+                <Link to='/' replace>
+                  <li>首页
+                  </li>
                 </Link>
                 <Link to='/list' replace>
                   <li>1</li>
@@ -32,9 +34,12 @@ class App extends Component {
               </ul>
             </div>
             <div className={'content'}>
-              <Route exact path='/homepage' component={Homepage} />
+              <Route exact path='/' component={Homepage} />
               <Route path='/list' component={List} />
               <Route path='/product' component={Product} />
+
+
+
             </div>
           </div>
         </div>

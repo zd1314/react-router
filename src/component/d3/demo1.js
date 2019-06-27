@@ -6,20 +6,27 @@ class Demo1 extends React.Component {
   }
   render() {
     return (
-      <div ref={'lef'}></div>
+      <div style={{
+        position: 'absolute',
+        left: 800,
+        top: 300
+      }} ref={ref=>this._refs=ref}></div>
     )
   }
   componentDidMount() {
     let me = this;
     let width = 500, height = 300;
-    let svg = d3.select(me.refs.lef).append('svg')
+    me.svg = d3.select(this._refs).append('svg')
       .attr('width', width)
       .attr('height', height)
-      .append('rect')
-      .attr('x1', 20)
-      .attr('y1', 40)
-      .attr('x2', 20)
-      .attr('y2', 40)
+      .append('path')
+      .attr('d', ' M 18,3 L 46,3 L 46, 40 L 61, 40 L 32, 68 L 3, 40 L 18, 40Z ')
+      .attr('stroke', '#ccc')
+      // .attr('stroke-width',5)
+      .attr('fill', 'red')
+
+
+
   }
 }
 export default Demo1;

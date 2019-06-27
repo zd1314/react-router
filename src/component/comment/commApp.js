@@ -43,9 +43,10 @@ class CommApp extends React.Component {
     this.setState({ comments })
     this._saveComments(comments)
   }
-  
+
   componentDidMount() {
     this._loadComments()
+    console.log(React.Children)
 
   }
   render() {

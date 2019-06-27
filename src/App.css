@@ -63,7 +63,8 @@
   line-height: 30px;
   width: 300px;
   border-bottom: 1px solid #ccc;
-  background: red
+  background: black;
+  color:#fff;
 }
 .nav-wrap li:hover{
   color:#fff;

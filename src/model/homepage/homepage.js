@@ -2,7 +2,7 @@ import React from 'react';
 import Lunbo from '../../component/lunbo/lunbo';
 import Tab from '../../component/tab/tab';
 import Map from '../../component/map/map';
-
+import Popul from '../../component/d3/demo1'
 import Music from '../../component/music/music';
 import ClipPath from '../../component/clip-path/clipPath';
 class HomePage extends React.Component {
@@ -14,12 +14,12 @@ class HomePage extends React.Component {
     return (
       <div >
         {/* <Lunbo /> */}
-        {/* <Tab /> */}
+        <Tab />
         <Map />
-
+        <Popul />
         <Music />
         < ClipPath />
-      </div>
+      </div >
     )
   }
 }

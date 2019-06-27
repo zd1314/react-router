@@ -20,11 +20,18 @@ class Map extends React.Component {
   }
   componentDidMount() {
     let map = new AMap.Map('container', {
-      resizeEnable: true, //是否监控地图容器尺寸变化
-      zoom: 4, //初始化地图层级
-      center: [116.397428, 39.90923], //初始化地图中心点
-      mapStyle: 'amap://styles/9a4a00a96613c1c76f89fbe89ba9fb77'
+      resizeEnable: true,
+      center: [116.505348, 39.795592],
+      zoom: 5,
+      pitch: 50,
+      rotation:116,
+      viewMode: '3D',
+      mapStyle: 'amap://styles/ef433b3e7889677c0ca7a260dfa8a9c5'
     });
+    map.AmbientLight = new AMap.Lights.AmbientLight([0, 1, 14],2.2);
+    map.on('indoor_create', function () {
+      map.indoorMap.showIndoorMap('B000A856LJ', 5);
+    })
   }
 }
 export default Map;
